@@ -1,0 +1,44 @@
+<h3><b><font color="red" size="6" face="times new roman	"><u><center>ADD CUSTOMERS</center></u></font></b></h3>
+
+        <style>
+          body
+          {
+             background-color:#eee;
+          }  
+          .Form {
+          	padding: 10px;
+          	border: 1px solid #ccc;
+          	text-align: center;
+          	margin: auto;	
+          	width: 30%;
+          	border-radius: 4px;
+          	background-color: white;
+          }    
+          .Input {
+          	width: 70%;
+          }
+        </style>
+
+<form method="post" action="/customer/add" class='Form' >
+	Name     : <br><input class='Input' type="text" name="name" placeholder="Add Name"><br><br>
+	Email Id : <br><input class='Input' type="text" name="email" placeholder="Add Email"><br><br>
+	Gender   : <br><input class='Input' type="text" name="Gender" placeholder="Add Gender"><br><br>
+	D.O.B    : <br><input class='Input' type="text" name="DOB" placeholder="Add DOB"><br><br>
+	Address  : <br><input class='Input' type="text" name="Address" placeholder="Add Address"><br><br>
+	City  : <br><input class='Input' type="text" name="City" placeholder="Add City"><br><br>
+	State  : <br><input class='Input' type="text" name="State" placeholder="Add State"><br><br>
+	Country  : <br><input class='Input' type="text" name="Country" placeholder="Add Country"><br><br>
+	<input type="submit" value="Submit">
+</form>
+
+<br><br><br>	
+<a  href="/customer/info/" style="float: right;"><font color="blue" size="5" ><b>View Customers</font></b></a>
+
+<!--<form method="get" action="/customer/info">
+	<input type="submit" value="View Customers">
+</form>-->
+
+<br><br>
+<% if(status === true) { %>
+	<h1>Customer Added</h1>
+<% } %>

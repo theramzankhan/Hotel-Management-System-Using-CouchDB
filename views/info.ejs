@@ -1,0 +1,48 @@
+<h3><b><font color="red" size="6" face="times new roman	"><u><center> DETAILS</center></u></font></b></h3>
+</br>
+
+
+
+<form method="get" action="/" align="middle" class='Form'>
+	<input type="submit" value="Add Customer">
+</form>
+</br>
+
+<table border="1" width="100%" bgcolor="white">
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Gender</th>
+		<th>DOB</th>
+		<th>Address</th>
+		<th>City</th>
+		<th>State</th>
+		<th>Country</th>
+		<th>Update</th>
+		<th>Delete</th>
+	</tr>
+	<% customers.forEach(function(customer){ %>
+		<tr>
+			<td align="center" ><%= customer.value.name %></td>
+			<td align="center" ><%= customer.value.email %></td>
+			<td align="center" ><%= customer.value.Gender %></td>
+			<td align="center" ><%= customer.value.DOB %></td>
+			<td align="center" ><%= customer.value.Address %></td>
+			<td align="center" ><%= customer.value.City %></td>
+			<td align="center" ><%= customer.value.State %></td>
+			<td align="center" ><%= customer.value.Country %></td>
+			<td align="center" >
+				<form method="post" action="/customer/c/<%= customer.key %>">
+					<input type="hidden" value="<%= customer.value.rev %>" name="rev"><br>
+					<input type="submit" value="UPDATE" style=" width: 100%;" >
+				</form>
+			</td>
+			<td align="center" >
+				<form method="post" action="/customer/delete/<%= customer.key %>">
+					<input type="hidden" value="<%= customer.value.rev %>" name="rev"><br>
+					<input type="submit" value="DELETE" style=" width: 100%;" >
+				</form>
+			</td>
+		</tr>
+	<% }); %>
+</table>

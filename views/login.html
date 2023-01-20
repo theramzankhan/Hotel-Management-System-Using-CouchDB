@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
+        <style>
+          body
+          {
+             background-color:gray;
+          }
+
+         
+        </style>
+  	<head>
+      <title>LOGIN PAGE</title>
+         <head>
+       <style>
+          h1
+          {
+             color:black;
+             text-shadow:2px 2px 4px #000000;
+          }
+
+       .b
+       {
+          display:inline-block;
+          background-color:#4caf50;
+          border:none;
+          color:white;
+          text-align:center;
+          font-size:15px;
+          text-decoration:none;
+          padding:15px 32px;
+          cursor:pointer;
+          margin:4px 2px;
+       }
+
+       .b1
+       {
+          display:inline-block;
+          background-color:red;
+          border:none;
+          color:white;
+          text-align:center;
+          font-size:15px;
+          text-decoration:none;
+          padding:15px 32px;
+          cursor:pointer;
+          margin:4px 2px;
+       }
+       </style>
+      <script language="javascript">
+     function check(form)
+   { 
+     if(form.pswrd.value=="123")
+     { 
+       window.open('home.html')
+     }
+     else
+     {
+       alert("Error Password or Username")
+     }
+   }
+
+   function emailchk()
+      {
+        var x=document.Login.userid.value
+        if(x.indexOf("@")==-1) //Means if the string doesnot include @
+        {
+          alert("It seems you entered an invalid email address.")
+          document.Login.userid.focus() //This method of the text box, which basically forces the cursor to be at the specified text box.
+        }
+      }
+  </script>
+  </head>
+  <div class="container">
+  <body>
+
+              <h1>LOGIN PAGE</h1><br><br>
+
+    <form name="Login" action="CricWeb1.html">
+	   <b>Username : </b><br><input type="text" placeholder="Enter Username" name="userid" onblur="emailchk()"/><br><br>
+	   <b>Password : </b><br><input type="password" placeholder="Enter Password" name="pswrd"/><br><br>
+     <input type="checkbox" checked="checked" name="remember">Remember me<br>
+     <input type="button" class="b" onclick="check(this.form)" value="Login"/>
+	   <input type="reset" class="b1" value="cancel"/><br>
+     <span class="pswrd">Forgot <a href="#">password?</a></span>
+    </form> 
+  </body>
+  
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+   </div>
+  </body>
+</html>
+
+  

@@ -1,0 +1,39 @@
+<h3><b><font color="red" size="6" face="times new roman	"><u><center> EDIT</center></u></font></b></h3>
+</br>
+<style>
+          body
+          {
+             background-color:#eee;
+          }  
+          .Form {
+          	padding: 10px;
+          	border: 1px solid #ccc;
+          	text-align: center;
+          	margin: auto;
+          	width: 30%;
+          	border-radius: 4px;
+          	background-color: white;
+          }    
+          .Input {
+          	width: 70%;
+          }
+        </style>
+
+
+
+
+
+
+<form method="post" action="/customer/update/<%= customer._id %>" class='Form'>
+	Name     : <br><input type="text" value=<%= customer.name %> name="name" placeholder="Add Name"><br><br>
+	Email Id : <br><input type="text" value=<%= customer.email %> name="email" placeholder="Add Email"><br><br>
+	Gender   : <br><input type="text" value=<%= customer.Gender %> name="Gender" placeholder="Add Name"><br><br>
+	D.O.B    : <br><input type="text" value=<%= customer.DOB %> name="DOB" placeholder="Add Name"><br><br>
+	Address  : <br><input type="text" value=<%= customer.Address %> name="Address" placeholder="Add Name"><br><br>
+	City     : <br><input type="text" value=<%= customer.City %> name="City" placeholder="Add Name"><br><br>
+	State    : <br><input type="text" value=<%= customer.State %> name="State" placeholder="Add Name"><br><br>
+	Country  : <br><input type="text" value=<%= customer.Country %> name="Country" placeholder="Add Name"><br><br>
+
+	<input type="hidden" value="<%= customer._rev %>" name="rev"><br>
+	<input type="submit" value="UPDATE">
+</form>
